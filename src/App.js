@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import Main from "./layout/main";
-import Create from "./pages/createpage";
+import Create, { createaction } from "./pages/createpage";
 import Dashboard from "./pages/dashboard";
 import Error from "./pages/errorpage";
+import Postpage from "./pages/postpage";
 
 function App() {
 
   // const getUser = () => {
-  //   fetch("http://localhost:3500/")
+  //   fetch("/poster")
   //   .then(res => res.json())
   //   .then(json => console.log(json))
   // }
+
+  // useEffect(() => {
+  //   getUser()
+  // }, [])
 
   const router = createBrowserRouter([
     {
@@ -26,7 +31,13 @@ function App() {
         {
           index:true,
           path:"create",
-          element: <Create />
+          element: <Create />,
+          action: createaction
+        },
+        {
+          index:true,
+          path:"post/:id",
+          element: <Postpage />
         }
       ]
     },

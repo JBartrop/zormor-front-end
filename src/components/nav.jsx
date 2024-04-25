@@ -6,12 +6,16 @@ function Nav() {
   return (
     <nav>
         <button aria-label="home">
-            <HomeIcon width={18} />
-            <span><Link to ="/"  className='link'>home</Link></span>
+          <Link to ="/"  className='link'>
+            <HomeIcon width={15} />
+            <span>home</span>
+          </Link>
         </button>
         <button aria-label="create">
-            <NewspaperIcon width={18} />
-            <span><Link to="/create" className='link'>create</Link></span>
+        <Link to="/create" className='link'>
+            <NewspaperIcon width={15} />
+            <span>create</span>
+          </Link>
         </button>
     </nav>
   )

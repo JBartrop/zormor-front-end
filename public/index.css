@@ -21,6 +21,13 @@ code {
   box-sizing:border-box;
 }
 
+body{
+  background-color: #000000;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
+
+}
+
 nav{
   z-index:100;
   position:absolute;
@@ -30,7 +37,7 @@ nav{
   width:100%;
   display:flex;
   justify-content:center;
-  background:rgb(252, 208, 14);
+  background:rgb(209, 174, 16);
   color:black;
   align-items:center;
   box-shadow: 0px 0px 7px 6px #5555;
@@ -40,12 +47,13 @@ nav{
 nav button{
   background:none;
   text-decoration:none;
-  height:40px;
+  height:45px;
   width:200px;
   margin:2rem;
   display:flex;
   justify-content:center;
   align-items:center;
+  text-align:center;
   font-weight:bold;
   font-size:0.9rem;
   text-transform:uppercase;
@@ -58,7 +66,7 @@ nav button span{
   margin-left:10px;
 }
 
-nav button span .link{
+nav button .link{
   text-decoration:none;
   color:black;
 }
@@ -73,27 +81,191 @@ section{
 }
 
 .create{
-  margin:auto;
+  width:100%;
 }
 
 .create h1{
   font-size:3rem;
+  color:white;
+  text-transform:uppercase;
+  text-align:center;
 }
 
 .create .forms{
-  width:50%;
-  height:70%;
-  background:blue;
-}
+  backdrop-filter:blur(10px);
+  /* background:blue; */
+  width:65%;
+  height:auto;
+  padding:10px;
+  margin: 30px auto 20px auto;
+  box-shadow: 0 1px 5px rgb(2, 2, 2);
+  border-radius:20px;
+} 
 
 
 .create .forms input{
   width:100%;
+  padding:15px;
+  margin:10px auto;
+  border-radius:20px;
 }
+
+.create .forms input[type="file"]{
+  color:white;
+  text-decoration:none;
+  border:1px solid white;
+}
+
+.create .forms button{
+  text-decoration:none;
+  width:100%;
+  padding:15px;
+  margin:10px auto;
+  transition:0.3s ease;
+  border-radius:20px;
+  font-size:1.1rem;
+  text-transform:uppercase;
+  font-weight:bold;
+  background:rgb(209, 174, 16);
+  color:white;
+}
+
+.create .forms button:hover{
+  background:rgb(156, 131, 19);
+}
+
+.create .forms label{
+  color:white;
+  text-transform:uppercase;
+}
+
+.dashbaord{
+  color:white;
+}
+
+.post .content{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  flex-direction:row;
+}
+
+.post .content .postbox{
+  margin:20px;
+  /* text-align:center; */
+  list-style-type:none;
+  background:#111;
+  border-radius:20px;
+  transition:0.3s ease;
+  height: auto;
+  width:300px;
+  cursor:pointer;
+}
+
+.post .content .postbox .post-image{
+  width:300px;
+}
+
+.post .content .postbox .post-image img{
+  width:100%;
+  border-radius:20px 20px 0px 0px;
+}
+
+.post .content .postbox .post-text{
+  margin:10px 10px 25px 10px;
+  color:white;
+}
+
+.post .content .postbox .post-text button{
+  margin-top:10px;
+  background:none;
+  text-decoration:none;
+  height:45px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-weight:bold;
+  font-size:0.9rem;
+  text-transform:uppercase;
+  border-radius:20px;
+  background:rgb(209, 174, 16);
+  transition:0.3s ease;
+}
+
+.post .content .postbox .post-text button .link{
+  text-decoration:none;
+  color:white;
+}
+
+.post .content .postbox .post-text button span{
+  margin-left:5px;
+}
+
+.post .content .postbox:hover{
+  background:#222;
+  border-radius:0px;
+}
+
+.post .content .postbox:hover .post-image img{
+  border-radius:0px;
+}
+
+.post .content .postbox .post-text button:hover{
+  background:rgb(156, 131, 19);
+}
+
+.postpage{
+  color:white;
+}
+
+.postpage .content{
+  display:flex;
+  justify-content:center;
+}
+
+.postpagebox{
+  height:auto;
+  padding:20px;
+  backdrop-filter:blur(10px);
+}
+
+.postpage .content .post-image{
+  width:100%;
+}
+
+.postpage .content .post-image img{
+  width:100%;
+}
+
+.postpage .content .post-text{
+  font-size:1.5rem;
+  margin-top:20px;
+}
+
+.postpage .content .post-text p{
+  margin:10px;
+  line-height:1.5rem;
+}
+
+
+.error{
+  display:flex;
+  justify-content:center;
+  font-size:4rem;
+  font-weight:bold;
+  color:white;
+}
+
+
 
 /*responsive*/
 @media(max-width:440px){
   section{
     padding:6rem 2rem;
+  }
+  .create .forms{
+    width:90%;
   }
 }

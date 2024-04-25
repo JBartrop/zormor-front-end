@@ -1,10 +1,18 @@
 import { CameraIcon } from '@heroicons/react/24/solid';
 import React from 'react'
-import { useFetcher } from 'react-router-dom'
+import { Form, redirect, useFetcher } from 'react-router-dom'
+
+
+
+export async function createaction(){
+  return redirect("/")
+}
 
 function Create() {
 
     const fetcher = useFetcher();
+    const issubmitting = fetcher.state === "submitting"
+
 
   return (
     <section className="create">
@@ -12,16 +20,22 @@ function Create() {
         <h1>create</h1>
         </div>
         <div className="content">
-        <fetcher.Form method="POST" className="forms">
+        <Form method="post"  className="forms">
             <input type="hidden" _action="create" />
-            <input type="text" placeholder="name" />
-            <input type="text" placeholder="description" />
-            <input type="text" placeholder="location" />
-            <input type="time" placeholder="time" />
-            <label htmlFor="file-upload"> <CameraIcon width={20} /> </label>
-            <input type="file" name="file-upload" placeholder="image" />
-            <button type="submit">create</button>
-        </fetcher.Form>
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" placeholder="name" required />
+            <label htmlFor="name">Description</label>
+            <input type="description" name="Description" placeholder="description" required />
+            <label htmlFor="location">Location</label>
+            <input type="text" name="Location" placeholder="location"  required/>
+            <label htmlFor="Time">open hours</label>
+            <input type="time" name="Time" placeholder="open hours" required />
+            <label htmlFor="file-upload" className="file-uploads"> <CameraIcon width={20} /> image </label>
+            <input type="file" accept="image/png, image/jpg, image/gif, image/jpeg," name="file-upload" placeholder="image" required />
+            <button type="submit" disabled={issubmitting}>
+            {issubmitting ? "submitting..." : "create"}
+            </button>
+        </Form>
         </div>
     </section>
   )
