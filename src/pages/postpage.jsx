@@ -8,8 +8,7 @@ import { useParams } from 'react-router-dom'
 
 function Postpage() {
     const listId = useParams();
-    const lists = List.find((id, list) =>  list.id === listId.id )
-    console.log(lists)
+    const list = List.find(( item) =>  item.id === listId.id )
     console.log(listId.id)
 
 
@@ -20,13 +19,13 @@ function Postpage() {
         <div className="content">
             <div className="postpagebox">
                 <div className="post-image">
-                    <img src={Image1}  alt="posts-image" />
+                    <img src={list.image}  alt="posts-image" />
                 </div>
                 <div className="post-text">
-                    <p><UserCircleIcon width={15} /> name </p>
-                    <p><InformationCircleIcon width={15} />   description</p>
-                    <p><MapPinIcon width={15} />  location</p>
-                    <p><ClockIcon width={15} />  time</p>
+                    <p><UserCircleIcon width={15} /> {list.name} </p>
+                <p><InformationCircleIcon width={15} />   {list.description}</p>
+                    <p><MapPinIcon width={15} />  {list.location}</p>
+                    <p><ClockIcon width={15} />  {list.openhours}</p>
                 </div>
             </div>
         </div>

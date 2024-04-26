@@ -2,7 +2,7 @@ import Image1 from "./images/image1.jpg"
 
 const List = [
     {
-      id: 1,
+      id: "1",
       name: "Delegation",
       description: "the description of place",
       location: "Accra Ghana",
@@ -10,7 +10,7 @@ const List = [
       image: Image1 
     },
     {
-        id: 2,
+        id: "2",
         name: "Degree",
         description: "the description of place",
         location: "Accra Ghana",
@@ -18,7 +18,7 @@ const List = [
         image: Image1
       },
       {
-        id: 3,
+        id: "3",
         name: "Bars",
         description: "the description of place",
         location: "Accra Ghana",
@@ -26,7 +26,7 @@ const List = [
         image: Image1
       },
       {
-        id: 4,
+        id: "4",
         name: "shops",
         description: "the description of place",
         location: "Accra Ghana",
@@ -34,7 +34,7 @@ const List = [
         image: Image1
       },
       {
-        id: 5,
+        id: "5",
         name: "clothing shop",
         description: "the description of place",
         location: "Accra Ghana",
@@ -42,7 +42,7 @@ const List = [
         image: Image1
       },
       {
-        id: 6,
+        id: "6",
         name: "coffee shop",
         description: "the description of place",
         location: "Accra Ghana",
