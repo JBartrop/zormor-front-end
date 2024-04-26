@@ -52,7 +52,7 @@ function Create() {
             <label htmlFor="name">Description</label>
             <input 
               type="description"
-               name="Description" 
+               name="description" 
                placeholder="description"
                onChange={handlechange} 
                value={item.description}
@@ -93,17 +93,6 @@ function Create() {
             <button 
               type="submit" 
               disabled={issubmitting} 
-              onClick={(e) => {
-                 e.preventDefault()
-                 setitem({
-                  name:"",
-                  description:"",
-                  location:"",
-                  openhours:"",
-                  image:""
-                 })
-                 }
-              }
             >
             {issubmitting ? "submitting..." : "create"}
             </button>
