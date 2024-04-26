@@ -40,6 +40,14 @@ const List = [
         location: "Accra Ghana",
         openhours: "8am to 8pm",
         image: Image1
+      },
+      {
+        id: 6,
+        name: "coffee shop",
+        description: "the description of place",
+        location: "Accra Ghana",
+        openhours: "6am to 11am",
+        image: Image1
       }
   ];
 

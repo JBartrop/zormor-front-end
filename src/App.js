@@ -4,7 +4,7 @@ import Main from "./layout/main";
 import Create, { createaction } from "./pages/createpage";
 import Dashboard from "./pages/dashboard";
 import Error from "./pages/errorpage";
-import Postpage from "./pages/postpage";
+import Postpage, { postpageloader } from "./pages/postpage";
 
 function App() {
 
